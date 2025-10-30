@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: #f8f9fa;
+      font-family: Arial, sans-serif;
+    }
+    .form-container {
+      max-width: 500px;
+      margin: 50px auto;
+      padding: 30px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    .error {
+      color: red;
+      font-size: 0.9rem;
+    }
+    .success {
+      color: green;
+      font-size: 1rem;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h3 class="text-center mb-4">Register</h3>
+    <form id="registrationForm" onsubmit="return validateForm()">
+      
+      <div class="mb-3">
+        <label for="firstName" class="form-label">First Name</label>
+        <input type="text" class="form-control" id="firstName" placeholder="Enter First Name">
+        <div id="firstNameError" class="error"></div>
+      </div>
+
+      <div class="mb-3">
+        <label for="lastName" class="form-label">Last Name</label>
+        <input type="text" class="form-control" id="lastName" placeholder="Enter Last Name">
+        <div id="lastNameError" class="error"></div>
+      </div>
+
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="Enter Password">
+        <div id="passwordError" class="error"></div>
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter Email">
+        <div id="emailError" class="error"></div>
+      </div>
+
+      <div class="mb-3">
+        <label for="mobile" class="form-label">Mobile Number</label>
+        <input type="text" class="form-control" id="mobile" placeholder="Enter Mobile Number">
+        <div id="mobileError" class="error"></div>
+      </div>
+
+      <div class="mb-3">
+        <label for="address" class="form-label">Address</label>
+        <input type="text" class="form-control" id="address" placeholder="Enter Address">
+        <div id="addressError" class="error"></div>
+      </div>
+
+      <button type="submit" class="btn btn-primary w-100">Register</button>
+      <div id="successMsg" class="success text-center"></div>
+    </form>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    function validateForm() {
+      // Clear previous messages
+      document.getElementById("firstNameError").innerText = "";
+      document.getElementById("lastNameError").innerText = "";
+      document.getElementById("passwordError").innerText = "";
+      document.getElementById("emailError").innerText = "";
+      document.getElementById("mobileError").innerText = "";
+      document.getElementById("addressError").innerText = "";
+      document.getElementById("successMsg").innerText = "";
+
+      // Get values
+      let firstName = document.getElementById("firstName").value.trim();
+      let lastName = document.getElementById("lastName").value.trim();
+      let password = document.getElementById("password").value.trim();
+      let email = document.getElementById("email").value.trim();
+      let mobile = document.getElementById("mobile").value.trim();
+      let address = document.getElementById("address").value.trim();
+
+      let isValid = true;
+
+      // First Name Validation
+      if (!/^[A-Za-z]{6,}$/.test(firstName)) {
+        document.getElementById("firstNameError").innerText = "At least 6 letters, alphabets only.";
+        isValid = false;
+      }
+
+      // Last Name Validation
+      if (lastName === "") {
+        document.getElementById("lastNameError").innerText = "Last Name cannot be empty.";
+        isValid = false;
+      }
+
+      // Password Validation
+      if (password.length < 6) {
+        document.getElementById("passwordError").innerText = "Password must be at least 6 characters.";
+        isValid = false;
+      }
+
+      // Email Validation
+      let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
+      if (!emailPattern.test(email)) {
+        document.getElementById("emailError").innerText = "Invalid email format.";
+        isValid = false;
+      }
+
+      // Mobile Validation
+      if (!/^\d{10}$/.test(mobile)) {
+        document.getElementById("mobileError").innerText = "Mobile number must be 10 digits.";
+        isValid = false;
+      }
+
+      // Address Validation
+      if (address === "") {
+        document.getElementById("addressError").innerText = "Address cannot be empty.";
+        isValid = false;
+      }
+
+      // Success message
+      if (isValid) {
+        document.getElementById("successMsg").innerText = "Registration Successful!";
+      }
+
+      return false; // prevent actual form submission for demo
+    }
+  </script>
+
+</body>
+</html>
