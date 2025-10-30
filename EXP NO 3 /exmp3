@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Book Store</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand" href="#">BookStore 📚</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Categories</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="bg-light text-center p-5">
+    <div class="container">
+      <h1>Welcome to Our Online Book Store!</h1>
+      <p class="lead">Find your favorite books and explore new ones.</p>
+      <a href="#" class="btn btn-primary btn-lg">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- Search Bar -->
+  <section class="py-4">
+    <div class="container">
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Search for books...">
+        <button class="btn btn-primary" type="button">Search</button>
+      </div>
+    </div>
+  </section>
+
+ <!-- Book Section -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="mb-4">Available Books</h2>
+    <div class="row g-4">
+      <!-- Book Card 1 -->
+      <div class="col-md-3">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?fit=crop&w=200&h=300" class="card-img-top" alt="Book 1">
+          <div class="card-body">
+            <h5 class="card-title">The seeking Library</h5>
+            <p class="card-text">Author: James Dean</p>
+            <p class="card-text">$10.99</p>
+            <a href="#" class="btn btn-primary w-100">Buy Now</a>
+          </div>
+        </div>
+      </div>
+      <!-- Book Card 2 -->
+      <div class="col-md-3">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1529655683826-aba9b3e77383?fit=crop&w=200&h=300" class="card-img-top" alt="Book 2">
+          <div class="card-body">
+            <h5 class="card-title">Nowhere</h5>
+            <p class="card-text">Author: Jane Smith</p>
+            <p class="card-text">$12.50</p>
+            <a href="#" class="btn btn-primary w-100">Buy Now</a>
+          </div>
+        </div>
+      </div>
+      <!-- Book Card 3 -->
+      <div class="col-md-3">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?fit=crop&w=200&h=300" class="card-img-top" alt="Book 3">
+          <div class="card-body">
+            <h5 class="card-title">The idea where to start with</h5>
+            <p class="card-text">Author: Alice Johnson</p>
+            <p class="card-text">$15.00</p>
+            <a href="#" class="btn btn-primary w-100">Buy Now</a>
+          </div>
+        </div>
+      </div>
+      <!-- Book Card 4 -->
+      <div class="col-md-3">
+        <div class="card h-100">
+          <img src="https://tse2.mm.bing.net/th/id/OIP.TYtiazLfVQ36w5tsCT43RwHaLO?pid=Api&P=0&h=180" class="card-img-top" alt="Book 4">
+          <div class="card-body">
+            <h5 class="card-title">Alchemist</h5>
+            <p class="card-text">Author: Bob Lee</p>
+            <p class="card-text">$9.99</p>
+            <a href="#" class="btn btn-primary w-100">Buy Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer class="bg-primary text-white text-center py-3">
+    <div class="container">
+      <p>&copy; 2025 Online Book Store. All rights reserved.</p>
+      <p>Contact: info@bookstore.com</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
